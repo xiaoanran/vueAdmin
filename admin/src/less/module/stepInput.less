@@ -1,0 +1,55 @@
+.@{ns}step-input {
+    display: inline-block;
+    position: relative;
+    > [type="text"] {
+        width: 98px;
+    }
+    * {
+        .user-select(none);
+    }
+    > .input-up,
+    > .input-down {
+        position: absolute;
+        right: 10px;
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    > .input-up:after,
+    > .input-down:after {
+        content: "";
+        position: absolute;
+        z-index: 70;
+        right: 5px;
+    }
+    > .input-up:after {
+        border-bottom: 7px solid #999;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        top: 5px;
+    }
+    > .input-up {
+        top: 0;
+    }
+    > .input-down {
+        bottom: 0;
+    }
+    > .input-down:after {
+        border-top: 7px solid #999;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        bottom: 5px;
+    }
+    &.disabled {
+      * {
+        cursor: not-allowed;
+      }
+      .input-up:after{
+          border-bottom-color: #DBDBDB;
+      }
+      .input-down:after {
+        border-top-color: #DBDBDB;
+      }
+    }
+}

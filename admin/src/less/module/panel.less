@@ -1,0 +1,122 @@
+.@{ns}panel {
+    //float: left;
+    min-height: 100px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    min-width: 500px;
+    > .panel-head {
+        border-bottom: solid 1px #d0dee5;
+        line-height: 35px;
+        position: relative;
+        height: 35px;
+        //margin-bottom: 15px;
+        > h1 {
+            font-weight: 100;
+            font-size: 14px;
+            border-bottom: solid 3px #66c9f3;
+            float: left;
+            position: absolute;
+            //z-index: 100;
+            bottom: -1px;
+            padding: 0 3px;
+            height: 30px;
+            line-height: 25px;
+        }
+    }
+    > .panel-container {
+        padding: 25px 20px;
+        .msgs-list {
+          display: block;
+          .ue-clear;
+          > ul {
+            > li {
+              .ue-clear;
+              line-height: 12px;
+              padding-bottom: 14px;
+              display: block;
+              &.last{
+                padding-bottom: 1px;
+              }
+              > a {
+                font-size: 13px;
+                &:hover{
+                  color: #307fb1;
+                }
+              }
+              > .list-time {
+                float: left;
+                padding-left: 16px;
+                background: url(/static/imgs/module/panel/listico.png) no-repeat left center;
+                color: #969696;
+                &.right {
+                  float: right;
+                }
+              }
+              > .list-title{
+                float: left;
+                margin-left: 18px;
+                color: #000;
+                &:hover{
+                    text-decoration: underline !important;
+                }
+                &.right {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+    }
+    &.gray {
+        border: 1px solid #e6e6e6;
+        > .panel-head {
+            border-bottom: 1px solid #e6e6e6;
+            background: #f9f9f9;
+            padding-left: 7px;
+            > h1 {
+                border: none;
+            }
+        }
+        > .panel-container {
+            //padding: 7px;
+        }
+    }
+    
+    &.tools{
+      border: #d3dbde solid 1px;
+      > .panel-head{
+        background: url(/static/imgs/module/panel/tbg.png) repeat-x;
+        height: 36px;
+        line-height: 36px;
+        border-bottom: solid 1px #d3dbde;
+        text-indent: 14px;
+        font-weight: bold;
+        font-size: 14px;
+        > h1{
+          border-bottom: none;
+        }
+        > .head-tools {
+          float: right;
+          padding-right: 10px;
+          height: 100%;
+          display: inline-block;
+          height: inherit;
+          line-height: 36px;
+          color: #307fb1;
+          a {
+            font-weight: normal;
+            &:hover{
+              color: #307fb1;
+            }
+          }
+          .iconfont{
+            font-weight: 100;
+            font-size: 17px;
+            color: #666666;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+}

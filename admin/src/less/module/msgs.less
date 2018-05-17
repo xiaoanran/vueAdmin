@@ -1,0 +1,197 @@
+@font-face {font-family: "icon-pc";
+    src: url('/static/fonts/iconPcs/iconPc/icon-pc.eot?t=1477291646'); /* IE9*/
+    src: url('/static/fonts/iconPc/icon-pc.eot?t=1477291646#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/static/fonts/iconPc/icon-pc.woff?t=1477291646') format('woff'), /* chrome, firefox */
+    url('/static/fonts/iconPc/icon-pc.ttf?t=1477291646') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('/static/fonts/iconPc/icon-pc.svg?t=1477291646#icon-pc') format('svg'); /* iOS 4.1- */
+}
+
+.@{ns}msgs {
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    color: #555555;
+    min-width: 130px;
+    > .msg-con {
+        padding: 2px 10px 2px 23px;
+        .border-radius(2px);
+        > .msg-close {
+            position: absolute;
+            right: 5px;
+            top: 2px;
+            font-size: 21px;
+            font-weight: normal;
+        }
+        &.pr {
+          padding-right: 25px;
+        }
+    }
+    > .msg-icon {
+        font-size: 14px;
+        font-family: 'icon-pc';
+        font-style: normal;
+        text-decoration: none;
+        display: inline-block;
+        position: absolute;    
+        top: 3px;
+        left: 6px;
+    }
+    &.msg-error {
+        color: #ea4a36;
+        > .msg-con {
+            border: 1px solid #ffe3e0;
+            background-color: #fff2f2;
+            > .msg-close {
+                color: #ea4a36;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c60d";
+            }
+        }
+    }
+    &.msg-stop {
+        color: #ea4a36;
+        > .msg-con {
+            border: 1px solid #ffe3e0;
+            background-color: #fff2f2;
+            > .msg-close {
+                color: #ea4a36;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c60b";
+            }
+        }
+    }
+    &.msg-success {
+        color: #4ab933;
+        > .msg-con {
+            border: 1px solid #dcf9d6;
+            background-color: #edffe9;
+            > .msg-close {
+                color: #4ab933;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\e601";
+            }
+        }
+    }
+    &.msg-warning {
+        color: #cf700b;
+        > .msg-con {
+            border: 1px solid #fee8d7;
+            background-color: #fef1e3;
+            > .msg-close {
+                color: #cf700b;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c612";
+            }
+        }
+    }
+    &.msg-notice {
+        color: #ee9f28;
+        > .msg-con {
+            border: 1px solid #faf1d7;
+            background-color: #fffff1;
+            > .msg-close {
+                color: #ee9f28;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c601";
+            }
+        }
+    }
+    &.msg-tips {
+        color: #ee9f28;
+        > .msg-con {
+            border: 1px solid #faf1d7;
+            background-color: #fffff1;
+            > .msg-close {
+                color: #ee9f28;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c609";
+            }
+        }
+    }
+    &.msg-info {
+        color: #3a9ed5;
+        > .msg-con {
+            border: 1px solid #e4f3fd;
+            background-color: #f2faff;
+            > .msg-close {
+                color: #3a9ed5;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c60a";
+            }
+        }
+    }
+    &.msg-question {
+        color: #333;
+        > .msg-con {
+            border: 1px solid #eaeaea;
+            background-color: #f7f7f7;
+            > .msg-close {
+                color: #333;
+            }
+        }
+        > .msg-icon {
+            &:before {
+                content: "\c605";
+            }
+        }
+    }
+    &.msg-default {
+        > .msg-con {
+            color: #555555;
+        }
+    }
+    &.msg-naked {
+        padding: 1px;
+        > .msg-con {
+            border: none;
+            background-color: transparent;
+        }
+    }
+    &.msg-block {
+        display: block;
+    }
+    &.msg-large {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bold;
+        > .msg-con {
+            padding: 11px 28px 11px 44px;
+        }
+        > .msg-icon {
+            top: 12px;
+            left: 11px;
+            font-size: 24px;
+        }
+    }
+}
+
+.@{ns}validate-error {
+    > .@{ns}select,
+    > .@{ns}-text,
+    > .@{ns}-textarea {
+        border: 1px solid #ea4a36 !important;
+    }
+}

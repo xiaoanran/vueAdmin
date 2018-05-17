@@ -1,0 +1,114 @@
+.@{ns}sliding-validate{
+    user-select: none;
+    width: auto;
+    height: 34px;
+    background: #e8e8e8;
+    position: relative;
+    > .validate-yet {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        background: #3C95C8;
+    }
+    > .validate-button {
+        color: #737383;
+        text-align: center;
+        width: 40px;
+        height: 34px;
+        line-height: 34px;
+        border: 1px solid #ccc;
+        position: absolute;
+        left: 0;
+        cursor: move;
+        background: #fff url(/static/imgs/module/slidingValidate/sliding_button.png) no-repeat center;
+        z-index: 2;
+        .animation(all 3s linear);
+        &.ok {
+            background: #fff url(/static/imgs/module/slidingValidate/sliding_ok.png) no-repeat center;
+        }
+    }
+    .validate-text {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        color: #9c9c9c;
+        line-height: 34px;
+        font-size: 14px;
+        cursor: pointer;
+        > .text-not-yet,
+        > .text-yet {
+            text-align: center;
+            float: none;
+            z-index: 0;
+            height: auto;
+            border: none;
+            position: static;
+            cursor: inherit;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        > .text-yet {
+            color: #ffffff;
+            display: inline;
+            padding-left: 20px;
+            &.loading {
+                background: url(/static/imgs/module/loading/loading.gif) no-repeat center center;
+            }
+        }
+        > .text-not-yet {
+            left: 0;
+            line-height: 34px;
+            background: -webkit-gradient(linear,left top,right top,color-stop(0, #4d4d4d),color-stop(0.4, #4d4d4d),color-stop(0.5, white),color-stop(0.6, #4d4d4d),color-stop(1, #4d4d4d));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            .animation(slidetounlock 3s infinite);
+            -webkit-text-size-adjust: none;
+        }
+    }
+}
+
+
+@-webkit-keyframes slidetounlock{
+    0% {
+        background-position:-200px 0;
+    }
+    100% {
+        background-position:200px 0
+    }
+}
+@keyframes slidetounlock{
+    0% {
+        background-position:-200px 0;
+    }
+    100% {
+        background-position:200px 0
+    }
+}
+@-moz-keyframes slidetounlock{ 
+    0% {
+        background-position:-200px 0;
+    }
+    100% {
+        background-position:200px 0
+    }
+} 
+@-o-keyframes slidetounlock{ 
+    0% {
+        background-position:-200px 0;
+    }
+    100% {
+        background-position:200px 0
+    }
+} 
+@-ms-keyframes slidetounlock{ 
+    0% {
+        background-position:-200px 0;
+    }
+    100% {
+        background-position:200px 0
+    }
+} 

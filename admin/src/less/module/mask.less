@@ -1,0 +1,40 @@
+.@{ns}mask {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    right: 0;
+    z-index: 9998;
+    display: block;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    .no-select;
+    //background-image:url(/static/imgs/module/mask/pattern.png);
+    background-color: rgba(0,0,0,.3);
+    .mask-close {
+      position: absolute;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      right: 50px;
+      top: 50px;
+      background-color: #ccc;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 27px;
+      &:hover {
+        background-color: #2E8DED;
+        //background-color: #DA0C0C;
+      }
+    }
+    &.opacity {
+      background-color: rgba(0,0,0,0);
+    }
+}

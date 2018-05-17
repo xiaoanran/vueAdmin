@@ -1,0 +1,33 @@
+body,
+main {
+    //background: #edf6fa;
+}
+.@{ns}error {
+    width: 490px;
+    margin-top: 75px;
+    padding-top: 65px;
+    margin: 10% auto;
+    &.e404 {
+        background: url(/static/imgs/module/error/404.png) no-repeat;
+    }
+    &.e500 {
+        background: url(/static/imgs/module/error/500.png) no-repeat;
+    }
+    > h2 {
+        font-size: 22px;
+        padding-left: 154px;
+        font-weight: normal;
+    }
+    > p {
+        padding-left: 154px;
+        line-height: 35px;
+        color: #717678;
+    }
+    > .reindex {
+        padding-left: 154px;
+        > .hs-button {
+            margin-top: 20px;
+            padding: 7px 28px;
+        }
+    }
+}

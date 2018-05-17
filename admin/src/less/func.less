@@ -1,0 +1,118 @@
+.translate(@x; @y) {
+    -webkit-transform: translate(@x, @y);
+    -ms-transform: translate(@x, @y);
+    -o-transform: translate(@x, @y);
+    transform: translate(@x, @y);
+}
+
+.transform(@transition) {
+    -webkit-transform: @transition;
+    -moz-transform: @transition;
+    -o-transform: @transition;
+    transform: @transition;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.animation(@animation) {
+    -webkit-animation: @animation;
+    -moz-animation: @animation;
+    -o-animation: @animation;
+    animation: @animation;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.transition-delay(@delay) {
+    -webkit-transition-delay: @delay;
+    -moz-transition-delay: @delay;
+    -o-transition-delay: @delay;
+    transition-delay: @delay;
+}
+
+.opacity(@opacity) {
+    @opacity-ie: (@opacity * 100);
+    opacity: @opacity;
+    filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.user-select(@us) {
+    -moz-user-select: @us;
+    moz-user-select: -moz-@us;
+    -o-user-select: @us;
+    -webkit-user-select: @us;
+    -khtml-user-select: @us;
+    -ms-user-select: @us;
+    user-select: @us;
+}
+
+.blur(@blur) {
+    //filter: ~"url(blur.svg#blur)"; /* FireFox, Chrome, Opera */
+    
+    -webkit-filter: blur(@blur); /* Chrome, Opera */
+       -moz-filter: blur(@blur);
+        -ms-filter: blur(@blur);    
+            filter: blur(@blur);
+    
+    filter: ~"progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false)"; /* IE6~IE9 */
+}
+
+.box-sizing(@bs) {
+    -webkit-box-sizing: @bs;
+    -moz-box-sizing: @bs;
+    box-sizing: @bs;
+}
+
+.box-shadow(@bs) {
+    -webkit-box-shadow: @bs;
+    -moz-box-shadow: @bs;
+    box-shadow: @bs;   
+}
+
+.overflow-dot() {
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+}
+
+.link-color-setting(@default, @hover){
+    color: @default;
+    &:hover,
+    &:active {
+      color: @hover;
+    }
+}
+
+.background-size(@value) {
+    -webkit-background-size: @value;
+    -moz-background-size: @value;
+    -o-background-size: @value;
+    background-size: @value;
+}
+
+.ie-pie(){
+    behavior: ~"url(../assets/css/pie.htc)";
+}
+.placeholder(@p){
+    ::-moz-placeholder { color: @p; }
+    ::-webkit-input-placeholder { color: @p; }
+    :-ms-input-placeholder { color: @p; }
+}
+                    

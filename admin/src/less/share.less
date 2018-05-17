@@ -1,0 +1,239 @@
+@import "variables";
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: @default-font-family;
+  line-height: @default-line-height;
+  line-height: 14px\9;
+  color: @default-font-color;
+  font-size: @global-font-size;
+  font-size: 14px\9;
+  position: relative;
+  background: #FFFFFF;
+}
+
+a,
+button,
+[type=file] {
+    font-family: @default-font-family;
+}
+
+cite {
+  font-style: normal;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 1280px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear,
+.container,
+.row {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+menu {
+  display:block;
+}
+a {
+    color: @default-font-color;
+    outline: none !important;
+}
+
+input {
+    background-color: #FFFFFF;
+}
+
+[type="button"],
+img {
+    border: none;
+}
+
+[type=radio],
+[type=checkbox] {
+    opacity: 0;
+}
+a, input, button, textarea,select {
+    outline: none !important;
+}
+
+input:active,
+input:focus,
+input:hover {
+    outline: none;
+}
+
+ul > li,
+ol > li {
+    list-style: none;
+}
+
+a {
+  transition: 'color .3s ease,background .3s ease';
+}
+
+[disabled] {
+    cursor: not-allowed;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// 通用样式
+.scrollbar {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+.scrollbar::-webkit-scrollbar {
+    width: 2px
+}
+.scrollbar::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track-piece {
+    background-color: #fff
+}
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d4d8e2
+}
+.scrollbar::-webkit-scrollbar-button {
+    background-color: #fff;
+    display: none
+}
+// 白色滚动条
+.scrollbar.white::-webkit-scrollbar-track,
+.scrollbar.white::-webkit-scrollbar-track-piece {
+    background-color: #495060
+}
+
+.scrollbar.white::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+.scrollbar.white::-webkit-scrollbar-button {
+    background-color: #495060;
+    display: none
+}
+
+@font-face {
+  font-family: 'klnmi';
+  src: url('/static/fonts/klnmi/6b651oo8355klnmi.eot');
+    /* IE9*/
+  src: url('/static/fonts/klnmi/6b651oo8355klnmi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/static/fonts/klnmi/6b651oo8355klnmi.woff') format('woff'), /* chrome、firefox */
+  url('/static/fonts/klnmi/6b651oo8355klnmi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('/static/fonts/klnmi/6b651oo8355klnmi.svg#思源黑体-极细') format('svg');
+    /* iOS 4.1- */
+}
+
+.not-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.allow-select {
+  -webkit-touch-callout: inherit;
+  -webkit-user-select: inherit;
+  -khtml-user-select: inherit;
+  -moz-user-select: inherit;
+  -ms-user-select: inherit;
+  user-select: inherit;
+}
+
+.overflow-dot{
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+// 按钮文字点点点
+.dotting {
+    display: inline-block; width: 10px; min-height: 2px;
+    padding-right: 2px;
+    border-left: 2px solid currentColor; border-right: 2px solid currentColor;   
+    background-color: currentColor; background-clip: content-box;
+    box-sizing: border-box;
+    animation: dot 4s infinite step-start both;
+    *zoom: ~"expression(this.innerHTML = '...')"; /* IE7 */
+}
+.dotting:before { content: '...'; } /* IE8 */
+.dotting::before { content: ''; }
+:root .dotting { margin-left: 2px; padding-left: 2px; } /* IE9+ */
+
+@keyframes dot {
+    25% { border-color: transparent; background-color: transparent; }          /* 0个点 */
+    50% { border-right-color: transparent; background-color: transparent; }    /* 1个点 */
+    75% { border-right-color: transparent; }                                   /* 2个点 */
+}
+
+.user-select(@us) {
+    -moz-user-select: @us;
+    moz-user-select: -moz-@us;
+    -o-user-select: @us;
+    -webkit-user-select: @us;
+    -khtml-user-select: @us;
+    -ms-user-select: @us;
+    user-select: @us;
+}
+
+.blur(@blur) {
+    background-color: #fff;
+    -webkit-filter: blur(@blur); /* Chrome, Opera */
+       -moz-filter: blur(@blur);
+        -ms-filter: blur(@blur);    
+            filter: blur(@blur);
+    
+    filter: ~"progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false)"; /* IE6~IE9 */
+}

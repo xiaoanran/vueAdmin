@@ -1,0 +1,35 @@
+.@{ns}tab {
+    > .tab-head {
+        height: 37px;
+        border-bottom: solid 1px #d0dee5;
+        position: relative;
+        border-left: solid 1px #d3dbde;
+        > li,
+        > li > a {
+            height: inherit;
+            display: inline-block;
+        }
+        > li {
+            float: left;
+            line-height: 37px;
+            background: url(/static/imgs/module/tab/itabbg.png) repeat-x;
+            border-right: solid 1px #d3dbde;
+            > a {
+                font-size: 14px;
+                color: #000;
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            &.selected {
+                > a {
+                    background: url(/static/imgs/module/tab/itabbg-active.png) repeat-x;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    > .tab-content {
+        padding: 18px 0;
+    }
+
+}

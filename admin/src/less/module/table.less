@@ -1,0 +1,48 @@
+.@{ns}table {
+    border: solid 1px #cbcbcb;
+    width: 100%;
+    clear: both;
+    text-align: left;
+    th {
+        background: url("/static/imgs/module/table/th.gif") repeat-x;
+        height: 34px;
+        line-height: 34px;
+        border-bottom: solid 1px #b6cad2;
+        //text-indent: 11px;
+        padding: 0 2px;
+    }
+    td {
+        border-right: dotted 1px #c7c7c7;
+        padding: 2px;
+    }
+    tr {
+      &:nth-of-type(even) {
+            background: #f5f8fa;
+      }
+      &:hover {
+            background: #e5ebee;
+      }
+    }
+    &.left th,
+    &.left td {
+        text-align: left;
+    }
+    &.t1.left th,
+    &.left.t1 th {
+        padding-left: 3px;
+    }
+    &.right th,
+    &.right td {
+        text-align: right;
+    }
+    &.t1.right th,
+    &.right.t1 th {
+        padding-right: 3px;
+    }
+    &.center {
+        th,
+        td {
+            text-align: center;
+        }
+    }
+}

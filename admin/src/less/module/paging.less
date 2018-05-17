@@ -1,0 +1,42 @@
+.@{ns}paging {
+  .paging-count {
+    i {
+      font-style: normal;
+      color: #056dae;
+    }
+  }
+  .paging-list {
+    float: right;
+    > li {
+      float: left;
+      width: 31px;
+      height: 28px;
+      border: 1px solid #DDD;
+      text-align: center;
+      line-height: 28px;
+      border-left: none;
+      color: #3399d5;
+      cursor: pointer;
+      &:first-child.disabled,
+      &:last-child.disabled {
+        color: #ddd;
+      }
+      &:first-child {
+        border-left: 1px solid #ddd;
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child {
+        border-right: 1px solid #ddd;
+        border-radius: 0 5px 5px 0;
+      }
+      &.curr,
+      &:hover {
+        background: #f5f5f5;
+        color: #737373;
+      }
+      &.curr {
+        cursor: default;
+      }
+    }
+  }
+}

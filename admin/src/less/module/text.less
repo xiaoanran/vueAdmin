@@ -1,0 +1,36 @@
+//输入框
+.@{ns}text {
+    width: 170px;
+    font-family: @default-font-family;
+    height: 34px;
+    line-height: 34px\9;
+    font-size: 14px;
+    padding: 0 10px;
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+    border-top: solid 1px #a7b5bc;
+    border-left: solid 1px #a7b5bc;
+    border-right: solid 1px #ced9df;
+    border-bottom: solid 1px #ced9df;
+    background: url(/static/imgs/module/form/inputbg.gif) repeat-x;
+    &.disabled {
+        border: 1px solid #DBDBDB;
+        cursor: default;
+        background-color: #fff;
+        color: #CCCCCC;
+        .user-select(none);
+    }
+    &.min {
+        width: 35px;
+    }
+    &.short {
+        width: 100px;
+    }
+    &.normal {
+        width: 253px;
+    }
+    &.long {
+        width: 400px;
+    }
+}

@@ -1,0 +1,64 @@
+.@{ns}switch {
+  height: 28px;
+  border-radius: 3px;
+  width: 60px;
+  border-top: solid 1px #a7b5bc;
+  border-left: solid 1px #a7b5bc;
+  border-right: solid 1px #ced9df;
+  border-bottom: solid 1px #ced9df;
+  background: url(/static/imgs/module/form/inputbg.gif) repeat-x;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background .5s linear;
+  background: #fff;
+  span {
+    display: inline-block;
+    &.switch-show {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      > span {
+        width: 50%;
+        float: left;
+        text-align: center;
+        line-height: 28px;
+      }
+    }
+  }
+  .switch-cursor {
+    position: relative;
+    z-index: 3;
+    width: 30px;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 12px;
+      border-left: 1px solid #ccc;
+      content: '';
+    }
+    &:before {
+      margin: -6px 0 0 1px;
+    }
+    &:after {
+      margin: -6px 0 0 -2px;
+    }
+  }
+  &.on {
+    background: #3EAFE0;
+    color: #fff;
+    .switch-cursor {
+      left: 50%;
+    }
+  }
+}

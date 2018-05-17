@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/imgs/favicon.ico">
+    <link href="/static/css/animate.css" rel="stylesheet" />
+    <link href="/static/fonts/iconfont/iconfont.css" />
+    <title>admin</title>
+  </head>
+  <body>
+    <!--<div id="app"></div>-->
+    <div class="my-browsers">
+      <div class="browsers-box">
+        <p class="box-warn">
+          <i class="warn-ico"></i>你正在使用的浏览器内核版本过低，
+          <a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support" target="_blank">微软已经不再提供技术支持</a>，为避免可能存在的安全隐患，请尽快升级你的浏览器或者安装更安全的浏览器访问该系统。
+        </p>
+        <div class="box-list">
+          <a class="chrome" href="" target="_blank">
+            <i class="icon_browser"></i>
+            <strong class="browser_name" data-type="chrome">Chrome</strong>
+          </a>
+        </div>
+        <p class="box-hint">如果你正在使用的是双核浏览器，比如QQ浏览器、搜狗浏览器、猎豹浏览器、世界之窗浏览器、傲游浏览器、360浏览器等，可以使用浏览器的极速模式来继续访问该系统。</p>
+      </div>
+    </div>
+    <style>
+      .my-browsers {
+        margin-top: 10%;
+        font-family: -apple-system-font, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
+      }
+      .my-browsers a {
+        text-decoration: none;
+      }
+      .my-browsers .browsers-box > p {
+        text-align: center;
+        color: #999;
+      }
+      .my-browsers .browsers-box .box-warn {
+        font-size: 17px;
+        color: #333;
+      }
+      .my-browsers .browsers-box .box-warn .warn-ico {
+        background: url(/static/imgs/module/base_z3b5429.png) 0 637px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 3px;
+        margin-right: 5px;
+      }
+      .my-browsers .browsers-box .box-warn > a {
+        color: #576B95;
+      }
+      
+      .my-browsers .browsers-box .box-list {
+        padding: 40px;
+        text-align: center;
+      }
+      .my-browsers .browsers-box .box-list > a {
+        margin: 0 15px;
+        display: inline-block;
+      }
+      .my-browsers .browsers-box .box-list > a > i {
+        width: 110px;
+        display: inline-block;
+        height: 110px;
+        vertical-align: middle;
+        background: url(static/imgs/module/browser/page_browser_upgrade_z3a7b39.png) no-repeat 0px 0px;
+        
+      }
+      
+      .my-browsers .browsers-box .box-hint {
+        font-size: 14px;
+      }
+    </style>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

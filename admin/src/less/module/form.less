@@ -1,0 +1,127 @@
+.@{ns}form {
+  .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    .group-item {
+      display: inline-block;
+      > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      > label {
+        width: 86px;
+        line-height: 38px;
+        //margin-right: 15px;
+        margin-right: 10px;
+        position: relative;
+        padding-right: 10px;
+        text-align: left;
+        font-size: 13px;
+        color: #323232;
+        .overflow-dot();
+        > span {
+            color: #ea544a;
+            //position: absolute;
+            //top: 3px;
+            //right: 0;
+            //z-index: 1;
+            font-family: serif;
+        }
+        &.long {
+            width: 150px;
+        }
+        &.short {
+            width: 50px;
+        }
+      }
+      > .item-box {
+        //line-height: 38px;
+        > i {
+          color: #7f7f7f;
+          padding-left: 20px;
+          font-style: normal;
+          font-size: 12px;
+        }
+        > .@{ns}radio,
+        > .@{ns}checkbox {
+          vertical-align: middle;
+        }
+        > .@{ns}msgs.msg-block {
+          margin-top: 9px;
+        }
+        > .@{ns}select {
+          float: left;
+        }
+        [type="text"]:focus,
+        [type="password"]:focus,
+        textarea:focus,
+        [class*="-select"]:focus{
+          border: 1px solid #28a3ef;
+        }
+        &.error {
+          [type="text"],
+          [type="password"],
+          textarea,
+          [class*="-select"]{
+            border: 1px solid #EA4A36;
+          }
+          [class*="-radio"] > span,
+          [class*="-checkbox"] > span {
+            color: #EA4A36;
+          }
+        }
+      }
+    }
+    &.inline {
+      .group-item {
+        > label {
+          width: auto;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  input:disabled,
+  textarea:disabled,
+  input:read-only,
+  textarea:read-only {
+    .user-select(none);
+  }
+  [type="text"]:focus,
+  [type="password"]:focus,
+  textarea:focus {
+    //border-color: #35b558;
+    //.box-shadow(0 0 5px #51cc73);
+  }
+  &.table {
+    display: table;
+    width: 100%;
+    .form-inline-item {
+      display: table-row;
+      > * {
+        display: table-cell;
+        padding-bottom: 7px;
+      }
+    }
+  }
+  &.box-pd-bottom{
+    .form-inline-item {
+        >* {
+            padding-bottom: 0 !important;
+        }
+    }
+  }
+}
+
+.@{ns}fieldset {
+  border: 1px solid #ccc;
+  > legend {
+    margin-left: 11px;
+    padding: 0 10px;
+  }
+  > .fieldset-main {
+    padding: 10px 21px;
+  }
+}
+
